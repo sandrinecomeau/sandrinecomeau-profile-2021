@@ -1,0 +1,7 @@
+couleurs du projet
+
+vert pâle: #BDE9B7
+vert foncé: #79BD9A	
+
+orange des liens: #ef8e35
+couleur grise du texte: #3f454c
