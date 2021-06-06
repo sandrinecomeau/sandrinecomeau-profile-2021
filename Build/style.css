@@ -18,7 +18,7 @@ a:hover {
 
 /*styles pour des sections précices*/
 /*logo en haut à gauche*/
-#haut{
+.haut{
     position:fixed;
     top:0;
     background-color: #FFFFFF;
@@ -28,10 +28,15 @@ a:hover {
     padding-bottom: 5px;
 }
 
-#haut a, #haut h3{
+.haut a, .haut h3{
     float: left;
     text-align: center;
     text-decoration: none;
+}
+
+#logonom a{
+    padding-left: 10px;
+    padding-top: 20px;
 }
 
 #menu{
@@ -40,8 +45,13 @@ a:hover {
     right: 0;
 }
 
+#menu a{
+    padding-top: 20px;
+    padding-right: 30px
+}
+
 /*bloc d'intro en haut*/
-#intro{
+.intro{
     background-color: #3f454c;
     color: #FFFFFF;
     padding: 14px;
@@ -140,10 +150,10 @@ a.button:hover {
 /*sections de texte dans les autres pages*/
 
 /*layout à propos*/
-#abouttable{
+.abouttable{
     text-align: justify;
 }
-#abouttable td{
+.abouttable td{
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 20px;
@@ -175,15 +185,35 @@ a.button:hover {
     padding: 6px;
 }
 
-#projet{
+.projet{
     text-align: center;
     padding: 15px;
     padding-top: 30px;
 }
 
-#projet p{
+.projet p{
     text-align: justify;
     padding: 15px;
+}
+
+/*bouton vers les articles ref*/
+.ref_button{
+    padding: 4px;
+    padding-left:5px;
+    padding-right:10px;
+    border-radius: 4px;
+    background-color: rgba(238,238,234,0.54);
+    border-color: rgba(63,69,76,0.03)
+}
+
+.ref_button a{
+    text-decoration: none;
+    margin: auto;
+}
+
+.ref_button a img{
+    vertical-align: middle;
+    padding-right: 5px;
 }
 
 /* Responsive layout*/
@@ -203,11 +233,11 @@ a.button:hover {
     }
 
     /*empilement des cases des colonnes dans la page a propos et centrer les images*/
-    #abouttable td{
+    .abouttable td{
         display: inline-block;
         padding: 5px;"
     }
-    #abouttable img{
+    .abouttable img{
         width: 100%;
         padding-top: 10px;
     }
