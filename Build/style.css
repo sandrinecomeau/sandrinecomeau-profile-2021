@@ -1,10 +1,16 @@
 /*style pour tout le document*/
 
-/* Police*/
+html, body{
+    border: 0;
+    margin: 0;
+    width: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     color: #3f454c;
+    min-width: 400px;
 }
 
 a:visited, a {
@@ -16,18 +22,25 @@ a:hover {
     color: #ef8e35;
 }
 
-
 /*styles pour des sections précices*/
-/*logo en haut à gauche*/
+
+/*barre blanche en haut avec logo*/
 .haut{
     position:fixed;
     top:0;
     background-color: #FFFFFF;
-    width: 100%;
-    border-bottom: #FFFFFF;
-    border-bottom: 5px;
-    padding-bottom: 5px;
+    width: 100vw;
+    padding-bottom: 3px;
     z-index: 2;
+    box-shadow: rgba(50, 50, 93, 0.1) 0 2px 4px 0, rgba(0, 0, 0, 0.2) 0 1px 2px 0;
+}
+
+.haut a img{
+    padding: 5px 0 0 5px;
+}
+
+.haut a img:hover{
+    opacity: 77%;
 }
 
 .haut a, .haut h3{
@@ -41,57 +54,74 @@ a:hover {
     padding-top: 20px;
 }
 
-#menu{
+/*menu en haut à droite*/
+.menu{
     position:fixed;
     top:0;
     right: 0;
 }
 
-#menu a{
+.menu a{
     padding-top: 20px;
     padding-right: 30px
 }
 
-/*bloc d'intro en haut*/
+#menu_exception:hover{
+    color: #3e9768;
+}
+
+/*bloc texte d'intro en haut*/
 .intro{
     background-color: #3f454c;
     color: #FFFFFF;
     padding: 14px;
 }
 
-h1{
+.intro h1{
     color: #bde9b7;
+    padding-left: 5px;
 }
 
-#navbar {
+.intro p{
+    padding-left: 5px;
+}
+
+/*barre de navigation dans l'index*/
+.navbar {
     overflow: hidden;
     background-color: #333;
     width: 100%;
     position: sticky;
     top: 55px;
-    z-index: 2;
+    z-index: 3;
+    box-shadow: rgba(50, 50, 93, 0.2) 0 2px 4px 0, rgba(0, 0, 0, 0.3) 0 1px 2px 0;
 }
 
-/* Navbar links */
-#navbar a {
+.navbar a {
     float: left;
-    display: block;
+    display: inline-block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px;
+    vertical-align: middle;
     text-decoration: none;
 }
 
-/*section projet dans index*/
-/*titre des sections*/
-h2 {
-    text-align: center;
+#exeption_navbar_padding{
+    padding-left: 19px;
 }
 
+/*section projet dans index*/
+/*titre des sections (ex "science") */
+h2 {
+    text-align: center;
+    margin: 25px 0 18px 0;
+}
+
+/* grille des projets*/
 .tableindex{
     text-align: center;
-    padding-bottom: 20px;
-    table-layout: fixed;
+    padding-bottom: 40px;
     width: 100%;
 }
 
@@ -99,38 +129,51 @@ h2 {
     text-decoration: none;
 }
 
+.tableindex img{
+    width:25%;
+    margin: 0 0 40px 0;
+}
+
 /*animations sur les icones de l'index*/
 a.button {
     background: rgba(255, 255, 255, 0);
-    display: inline-block;
+    display: block;
+    z-index: 1;
+    /*position: relative; (pour mettre le texte sur les images)*/
 }
 a.button:hover {
     transition-duration: 1s;
     transform: translateY(-10px);
+    transition-timing-function: ease-out;
     z-index: 1;
 }
+
 
 /*bacground des sections et + */
 #prog, #art{
     background-color: #FFFFFF;
-    padding: 14px;
+    padding: 14px 14px 25px 14px;
 
 }
 
 #science{
-    background-color: #eeeeea;
-    padding: 14px;
+    background-color: rgba(238, 238, 234, 0.37);
+    padding: 14px 14px 25px 14px;
 }
 
 /*section contact*/
 #contact{
     background-color: #eeeeea;
-    padding: 14px;
+    padding: 14px 14px 25px 14px;
     text-align: center;
 }
 
 #contact img{
     padding: 0 10px;
+}
+
+#contact img:hover{
+    opacity: 77%;
 }
 
 /*sections de texte dans les autres pages*/
@@ -144,10 +187,13 @@ a.button:hover {
 }
 
 /*layout pour les pages de projet*/
+
+/*barre avec les pastilles mot-clés*/
 #barrepastille{
     overflow: hidden;
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
     background-color: #333;
+    box-shadow: rgba(50, 50, 93, 0.1) 0 2px 4px 0, rgba(0, 0, 0, 0.2) 0 1px 2px 0;
 }
 
 .pastille{
@@ -168,6 +214,8 @@ a.button:hover {
     padding: 6px;
 }
 
+
+/*texte pages des projets*/
 .projet{
     text-align: center;
     padding: 30px 15px 15px 15px;
@@ -193,7 +241,11 @@ a.button:hover {
 
 .ref_button a img{
     vertical-align: middle;
-    padding-right: 5px;
+    margin-right: 5px;
+}
+
+.ref_button:hover{
+    opacity: 77%;
 }
 
 /* Responsive layout*/
@@ -204,28 +256,32 @@ a.button:hover {
         padding: 5px;
         width: 100%;
     }
+    /*diminuttion de la taille des images de l'index*/
+    .tableindex img{
+        width:20%;
+    }
 }
+
 @media screen and (max-width: 600px) {
     /*réduction de la police de la barre de navigation de l'index*/
     #navbar{
         padding: 0;
         font-size: smaller;
     }
-
+    /*empilement des cases des colonnes dans la page index*/
+    .tableindex td{
+    display: block;
+    padding: 5px;
+    width: 100%;
+    }
     /*empilement des cases des colonnes dans la page a propos et centrer les images*/
     .abouttable td{
-        display: inline-block;
+        display: block;
         padding: 5px;"
     }
     .abouttable img{
         width: 100%;
         padding-top: 10px;
-    }
-    /*empilement des cases des colonnes dans la page index*/
-    .tableindex td{
-        display: block;
-        padding: 5px;
-        width: 100%;
     }
 }
 
@@ -233,10 +289,6 @@ a.button:hover {
     /*disparition du sandrine comeau associé au logo*/
     #logonom{
         display: none;}
-    .sticky {
-        position: relative;
-        top: 0;
-        width: 100%;
-    }
 }
+
 
