@@ -521,18 +521,15 @@ a.button:hover {
         width: 100%;
         padding-top: 10px;
     }
+    #animation_accueil1, #animation_accueil2, #animation_accueil3, #animation_accueil4, #animation_accueil5 {
+        height: 30vw;
+    }
 }
 
 @media screen and (max-width: 500px) {
     /*disparition du sandrine comeau associé au logo*/
     #logonom{
-        display: none;}
-    #animation_accueil1,
-    #animation_accueil2,
-    #animation_accueil3,
-    #animation_accueil4,
-    #animation_accueil5 {
-        height: 40vw;
+        display: none;
     }
 }
 @media screen and (max-height: 300px){
