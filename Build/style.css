@@ -60,7 +60,7 @@ p{
     text-align: center;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 80vh auto;
+    grid-template-rows: 70vh auto;
 }
 
 
