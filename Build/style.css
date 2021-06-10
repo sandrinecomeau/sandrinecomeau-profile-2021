@@ -532,7 +532,7 @@ a.button:hover {
     #animation_accueil3,
     #animation_accueil4,
     #animation_accueil5 {
-        width: 40vh
+        height: 40vw;
     }
 }
 @media screen and (max-height: 300px){
