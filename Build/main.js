@@ -1,11 +1,11 @@
 //page d'acceuil
-let buttonAcceuil= document.getElementById("boutton_acceuil")
+let boutonAcceuil= document.getElementById("boutton_accueil")
 let body= document.getElementById("body")
-let acceuil=document.getElementById("acceuil")
+let accueil=document.getElementById("accueil")
 
-    buttonAcceuil.onclick = function(){AcceuilDisparait()};
+boutonAcceuil.onclick = function(){AcceuilDisparait()};
     function AcceuilDisparait(){
-        acceuil.classList.add("acceuil2");
-        acceuil.classList.remove("acceuil1");
+        accueil.classList.add("accueil2");
+        accueil.classList.remove("accueil1");
         body.classList.remove("scrollbar_cachee");
     }
